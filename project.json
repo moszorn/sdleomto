@@ -1,0 +1,22 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "noCache" : true,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["cocos2d","ccui"],
+
+    "jsList" : [
+        "src/itemSprite.js",
+        "src/layer/rell.js",
+        "src/layer/machine.js",
+        "src/listenerArgs.js",
+        "src/resource.js",
+        "src/app.js"
+    ]
+}
