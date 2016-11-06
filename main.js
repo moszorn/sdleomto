@@ -53,27 +53,27 @@
  */
 
 cc.game.onStart = function(){
-    if(!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
+    if(!cc.sys.isNative && document.getElementById("cocosLoading")) 
         document.body.removeChild(document.getElementById("cocosLoading"));
 
-    cc.view.enableAutoFullScreen(false); // 关闭游戏在浏览器上自动全屏
+    cc.view.enableAutoFullScreen(false); 
 
-    // Pass true to enable retina display, on Android disabled by default to improve performance
+   
     cc.view.enableRetina(cc.sys.os === cc.sys.OS_IOS ? true : false);
 
-    // Adjust viewport meta
+   
     cc.view.adjustViewPort(true);
 
-    // Uncomment the following line to set a fixed orientation for your game
+  
     // cc.view.setOrientation(cc.ORIENTATION_PORTRAIT);
 
-    // Setup the resolution policy and design resolution size
+  
     cc.view.setDesignResolutionSize(1106, 623, cc.ResolutionPolicy.SHOW_ALL);
 
-    // The game will be resized when browser size change
+   
     cc.view.resizeWithBrowserSize(true);
 
-    //load resources
+   
     cc.LoaderScene.preload(g_resources, function () {
         cc.director.runScene(new HelloWorldScene());
     }, this);
